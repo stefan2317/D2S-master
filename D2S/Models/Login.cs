@@ -14,5 +14,4 @@ namespace D2S.Models
         public string pass { get; set; }
         public string verificar { get; set; }
     }
-
 }

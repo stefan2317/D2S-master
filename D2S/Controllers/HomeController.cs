@@ -28,7 +28,10 @@ namespace D2S.Controllers
                     if (res == "s")
                         return RedirectToAction("index", "Loged", TempData["nome"] = log.email);
                     if (res == "n")
-                        return RedirectToAction("index22", "home");
+                    {
+                        string verificaçao = res;
+                        return RedirectToAction("index", "home", TempData["verificaçao"] = verificaçao);
+                    }
                 }
             }
             catch (Exception ex)

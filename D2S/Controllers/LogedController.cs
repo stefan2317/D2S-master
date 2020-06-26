@@ -16,5 +16,10 @@ namespace D2S.Controllers
         {
             return View();
         }
+
+        public IActionResult Prefil()
+        {
+            return View();
+        }
     }
 }
