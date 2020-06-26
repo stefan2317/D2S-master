@@ -1,0 +1,37 @@
+﻿@model D2S.Models.EmpClass
+
+<div>
+    <a asp-controller="Emp" asp-action="Index" class="btn btn-primary">Ver mensagens</a>
+</div>
+
+
+<form asp-action="Index" class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label">Nome: </label>
+        <input asp-for="nome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Data: </label>
+        <input asp-for="data" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Texto: </label>
+        <input asp-for="texto" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Hora: </label>
+        <input asp-for="hora" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</form>
+
+@{
+    if (TempData["msg"] != null)
+    {
+    <script>
+            alert('@TempData["msg"]')
+    </script>
+    }
+}

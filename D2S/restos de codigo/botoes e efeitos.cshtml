@@ -1,0 +1,66 @@
+﻿<div style="margin-top:20%" class="col-12 text-center">
+
+        <div class="container col-12" style="z-index:1;position:absolute;" id="dispositivos">
+            <div class=" col-6 float-left"><button id="btnDesktop" onclick="func1()"> Desktop </button></div> <div class=" col-6 float-right"> <button id="btnTelemovel" onclick="func2()"> Telemovel </button></div><br />
+            <p></p><br />
+            <p></p>
+        </div>
+
+        <div class="container col-12" style="position: absolute;display:none" id="desktop">
+            <div class="col-6 float-left"> <button> Windows </button> </div><div class=" col-6 float-right"><button> imac </button></div><br />
+
+            <a id="a" style="color:white" onclick="func3()">Voltar</a>
+        </div>
+
+        <div class="container col-12" style="position:absolute;display:none" id="telemovel">
+            <button> Android </button> <button> Apple </button><br />
+            <a id="a" style="color:white" onclick="func4()">Voltar</a>
+        </div>
+
+    </div>
+
+<style>
+    /*botao desktop*/
+    @@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+#btnDesktop {
+    font-size: 1.8em;
+    text-align: center;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    background: linear-gradient(to bottom,rgb(255, 101, 0)0%,rgb(108, 37, 1)100%);
+}
+
+    #btnDesktop:hover {
+        animation: bounce 1s;
+    }
+    /*botao telemovel*/
+    #btnTelemovel {
+        font-size: 1.8em;
+        text-align: center;
+        border-radius: 7px;
+        border: none;
+        color: white;
+        background: linear-gradient(to bottom,rgb(255, 101, 0)0%,rgb(108, 37, 1)100%);
+    }
+
+        #btnTelemovel:hover {
+            animation: bounce 1s;
+        }
+</style>

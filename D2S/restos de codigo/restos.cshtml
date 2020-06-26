@@ -1,0 +1,281 @@
+﻿<!--primeira divisao-->
+<div style="margin-top:25vh;width:100%" class="container-fluid pt-0 pb-2">
+    <div class="col-12">
+        <div class="text-center">
+            <img src="~/images/logo.png" />
+        </div>
+        <hr style="width:75%" />
+        <p class="text-center" style="color:white">
+            sdfhjg sdfg gjsdfgjhs gjs fsgjhd sgjh sghjd fsgjhd fjsgh fghjsd ghjs gjhfsgjh dsgjh fgjhsf gjhsdgjf hsghj fsjghghjsdgfhj gdfg dfgdfgdfg dg df gd gdf gdf gdf gdg df gdfg df gdf gdf gdf gdf g
+            hgf hfgh f hf ghsghj ghjf sghjdfjghsdgjhf ghjs gjhfsghjd fgjsh gjh sgjh gfhjs
+        </p>
+        <div class="text-center">
+            <a asp-controller="home" asp-action="sobre"><input class="btn btn-outline-dark" value="sobre" /></a>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<!--segunda divisao (encomendar)-->
+
+<div class="container-fluid mb-4" style="height:100vh;width:100%">
+    <div class="col-12 text-center">
+        <p style="color:white">ola encomende aqui a </p>
+        <button asp-controller="home" asp-action="sobre">Encomendar</button>
+    </div>
+</div>
+
+<!--terceira divisao(aplicacao para windows e mac)-->
+<div class="container-fluid pt-5" style="margin-bottom:90px;height:100vh;width:100%">
+    <div class="col-12 text-center">
+        <p style="color:white">
+            ola encomende aqui a sdjkfghj gsfdghj ghjks fhgjks ghjksdghj ghjk sghjk fghjsdf gjhs ghjksdgjhkfsdghjkfsdghjkf gjhk ghjksdghjkf sghjkf ghjksdfghjk sghjkdf ghjks
+            dfhsdjklhfsdjhkfhjksdfhjklsdfjhklsdfhjk hjkl hjsdfhjk shjkdfhjksdhjkf lhkjsdfhjk hjksdfhjk hjksdfhjkl hjksdfhjklsdhkjfl hjklsdhjkf hjkls jkhlfhjkl shjkldf hjkljk
+        </p>
+
+        <div class="container col-12" style="z-index:1;position:absolute;" id="dispositivos">
+            <button onclick="func1()">Desktop</button> <button onclick="func2()">Telemovel</button><br />
+            <p></p><br />
+            <p></p>
+        </div>
+
+        <div class="container col-12" style="position: absolute;display:none" id="desktop">
+            <button>Windows</button> <button>imac</button><br />
+            <a id="a" style="color:white" onclick="func3()">Voltar</a>
+        </div>
+
+        <div class="container col-12" style="position:absolute;display:none" id="telemovel">
+            <button>Android</button> <button>Apple</button><br />
+            <a id="a" style="color:white" onclick="func4()">Voltar</a>
+        </div>
+
+    </div>
+</div>
+
+<!--JAVASCRIPT-->
+<script>
+        function func1() {
+            document.getElementById("desktop").style.zIndex = +1;
+            document.getElementById("dispositivos").style.display = "none";
+            document.getElementById("desktop").style.display = "block";
+        }
+
+        function func2() {
+            document.getElementById("telemovel").style.zIndex = +1;
+            document.getElementById("dispositivos").style.display = "none";
+            document.getElementById("telemovel").style.display = "block";
+        }
+
+        function func3() {
+            document.getElementById("desktop").style.zIndex = -1;
+            document.getElementById("dispositivos").style.display = "block";
+            document.getElementById("desktop").style.display = "none";
+        }
+
+        function func4() {
+            document.getElementById("telemovel").style.zIndex = -1;
+            document.getElementById("dispositivos").style.display = "block";
+            document.getElementById("telemovel").style.display = "none";
+        }
+
+</script>
+
+<!--quarta divisao (section dos cards)-->
+<div class="container mt-5 col-lg-12" style="height:100vh;width:100%">
+    <section id="cards" class="mt-5">
+        <div class="container-fluid my-3 py-5">
+            <div class="row">
+                <!--primeiro card-->
+                <div class="col-lg-2 col-md-6 col-xs-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-truck " style="font-size:2.5em"></i>
+                                <h4 class="mt-2">Frota</h4>
+                                <p>
+                                    Venha conhecer ja todos os veiculos atuais da nossa frota.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--segundo card-->
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-truck " style="font-size:2.5em"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--terceiro card-->
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-truck" style="font-size:2.5em"></i>
+                                <h4 class="mt-2">Frota</h4>
+                                <p>
+                                    Venha conhecer ja todos os veiculos atuais da nossa frota.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--quarto card-->
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-truck " style="font-size:2.5em"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--quarto card-->
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-truck " style="font-size:2.5em"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--quarto card-->
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <i class="fa fa-truck " style="font-size:2.5em"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--footer-->
+
+<footer class="mt-4 bg-dark text-center col-12">
+    <div class="footer-area">
+        <div class="container-fluid">
+            <div class="row">
+                <!-------primeira area do footer-------->
+                <div class="col-md-4 col-sm-4 col-12 col-sm-12 ">
+                    <div class="footer-content">
+                        <div class="footer-head">
+                            <!--footer logo-->
+                            <div class="footer-logo">
+                                <h4><img src="~/images/logo.png" width="70%"></h4>
+                            </div>
+                            <!--footer icons-->
+                            <div class="footer-icons">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <hr style="background-color:rgb(220, 86, 0)" />
+                                <p style="color:white">932018180</p>
+                                <p style="color:white">transportadorad2s@@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------segunda area do footer--------->
+                <div class="col-md-4 col-sm-4 col-12 col-sm-12" style="padding-top: 100px">
+                    <div class="but1">
+                        <p style="color:white">Veja aqui as nossa lojas perto de si.</p>
+                        <button type="submit">Lojas</button>
+                    </div>
+                    <div class="but1 pt-5">
+                        <p style="color:white">Venha trabalhar connosco!</p>
+                        <button type="submit">Trabalhos</button>
+                    </div>
+                </div>
+                <!--------terceira area do footer--------->
+                <div class="col-md-4 col-sm-4 col-12 col-sm-12" style="padding-top:80px">
+                    <div class="footer-content1">
+                        <div class="footer-head">
+                            <h4 style="color:white">Visite-nos</h4>
+                            <hr style="background-color:white;width:75%" />
+                            <p><i style="font-size:5.5em;color:rgb(220, 86, 0)" class="fa fa-map-marker pt-3" aria-hidden="true"></i></p>
+                            <p> <a style="color:white" href="https://www.google.com/maps/place/EPED+-+Escola+Profissional+de+Educa%C3%A7%C3%A3o+para+o+Desenvolvimento+(info@eped.pt)/@@38.6634957,-9.2053841,17z/data=!3m1!4b1!4m5!3m4!1s0xd1ecb06de84d29d:0x8ded251de715c09!8m2!3d38.6634915!4d-9.2031954">Largo Bulhão Pato 56, 2825-114 Caparica</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-------- area de baixo do footer--------->
+    <div class="footer-area-bottom container-fluid">
+        <div>
+            <br />
+            <br />
+            <div class="copyright text-center">
+                <p class="text-center">&copy; Copyright A D2S contem todos os direitos reservados.</p>
+            </div>
+            <div class="credits text-center">
+                Designed by <a class="fds" href="#">D2S Editors</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------EXEMPLOOOOOOOOOOOOOOOOOO-->
+@*<div class="form-horizontal">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="checkbox" id="divCheckBox">
+                        @Html.LabelFor(model => model.Ativo, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Ativo)
+                        @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control", placeholder = "" } })
+                    @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Sigla2, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Sigla2, new { htmlAttributes = new { @class = "form-control", placeholder = "" } })
+                    @Html.ValidationMessageFor(model => model.Sigla2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Sigla3, htmlAttributes: new { @class = "control-label" })
+                    @Html.EditorFor(model => model.Sigla3, new { htmlAttributes = new { @class = "form-control", placeholder = "" } })
+                    @Html.ValidationMessageFor(model => model.Sigla3, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
