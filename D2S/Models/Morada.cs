@@ -7,5 +7,7 @@ namespace D2S.Models
 {
     public class Morada
     {
+        
+
     }
 }

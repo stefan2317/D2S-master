@@ -74,8 +74,7 @@ namespace D2S.Controllers
         public ViewResult ver2([Bind] Cliente emp)
         {
             if (ModelState.IsValid)
-            {
-                
+            {               
                 ViewBag.ver = "3";
                 return View("../Home/PT/Registo");
             }
