@@ -7,5 +7,7 @@ namespace D2S.Models
 {
     public class Login
     {
+        public int MyProperty { get; set; }
+        public int MyPropety { get; set; }
     }
 }
