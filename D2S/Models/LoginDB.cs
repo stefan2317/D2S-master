@@ -19,7 +19,7 @@ namespace D2S.Models
         {
             string dd = "";
             try
-            {
+                {
                 MySqlCommand com = new MySqlCommand("SELECT * FROM clientes WHERE email='" + log.email + "' AND pass='" + log.pass + "'", con);
                 MySqlCommand com1 = new MySqlCommand("SELECT verificar FROM clientes WHERE email='" + log.email + "' AND pass='" + log.pass + "'", con);
                 con.Open();

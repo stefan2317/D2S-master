@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace D2S.Models
 {
-    public class FazerEncomenda
+    public class FazerEncomendaLogado
     {
+
         [Key]
         public int IDEncomenda { get; set; }
         public int id { get; set; }

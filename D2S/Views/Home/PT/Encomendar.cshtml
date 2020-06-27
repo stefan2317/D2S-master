@@ -1,0 +1,104 @@
+﻿@model D2S.Models.FazerEncomenda
+
+
+@{
+    ViewData["Title"] = "Fazer Encomenda";
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Voltar</a>
+</div>
+<br />
+<form asp-action="Index1" class="form-horizontal">
+    <div class="form-group">
+        <h4>Dados do Emissor</h4>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="control-label">Nome:</label>
+        <input asp-for="NomeEncomendado" class="form-control" />
+        <span class="text-danger" asp-validation-for="NomeEncomendado"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Contacto:</label>
+        <input asp-for="ContactoEncomendo" class="form-control" />
+        <span class="text-danger" asp-validation-for="ContactoEncomendo"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">E-mail: </label>
+        <input asp-for="EmailEncomendado" class="form-control" />
+        <span class="text-danger" asp-validation-for="EmailEncomendado"></span>
+    </div>
+    <hr />
+    <div class="form-group">
+        <h4>Dados do Recetor</h4>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="control-label">Nome:</label>
+        <input asp-for="NomeReceber" class="form-control" />
+        <span class="text-danger" asp-validation-for="NomeReceber"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">Contacto:</label>
+        <input asp-for="ContactoReceber" class="form-control" />
+        <span class="text-danger" asp-validation-for="ContactoReceber"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Contacto Alternativo:</label>
+        <input asp-for="ContactoAlternativo" class="form-control" />
+        <span class="text-danger" asp-validation-for="ContactoAlternativo"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">E-mail: </label>
+        <input asp-for="EmailReceber" class="form-control" />
+        <span class="text-danger" asp-validation-for="EmailReceber"></span>
+    </div>
+    <hr />
+    <div class="form-group">
+        <h4>Dados da Encomenda</h4>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="control-label">Precisa de empacotamento? </label>
+        <input asp-for="PrecisaEmpacotamento" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Comprimento(cm)</label>
+        <input asp-for="Comprimento" class="form-control" />
+        <span class="text-danger" asp-validation-for="Comprimento"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Altura(cm) </label>
+        <input asp-for="Altura" class="form-control" />
+        <span class="text-danger" asp-validation-for="Altura"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Largura(cm) </label>
+        <input asp-for="Largura" class="form-control" />
+        <span class="text-danger" asp-validation-for="Largura"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Peso(cm) </label>
+        <input asp-for="Peso" class="form-control" />
+        <span class="text-danger" asp-validation-for="Peso"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+    <hr />
+</form>
+<br />
+<div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Voltar</a>
+</div>
+
+@{
+    if (TempData["msg"] != null)
+    {
+        <script>
+            alert('@TempData["msg"]')
+        </script>
+    }
+}
