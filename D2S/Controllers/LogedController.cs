@@ -13,6 +13,11 @@ namespace D2S.Controllers
 
         public IActionResult Index()
         {
+            if (TempData["nome"] == null)
+            {
+                TempData["erro de login"] = "Terá de fazer o login para poder aceder a esta página.";
+                return RedirectToAction("index", "home", TempData["erro de login"]);
+            }
             return View();
         }
         public IActionResult Downloads()
@@ -44,6 +49,12 @@ namespace D2S.Controllers
             {
                 TempData["msg"] = ex.Message;
             }
+            return View();
+        }
+
+        public IActionResult SessaoTerminada()
+        {
+            TempData["nome"] = null;
             return View();
         }
     }

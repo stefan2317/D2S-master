@@ -23,33 +23,17 @@
         <a asp-action="index" asp-controller="home"><img src="~/images/logo.png" style="width:60%;padding-bottom:4%" /></a>
     </div>
     <div id="container" class="container text-center sticky-top col-12" style="padding-top: 4%">
-        <ul style="z-index:2">
-            <li> <a asp-action="index" asp-controller="loged" class="cool-link">Home</a> </li>
-            <li> <a asp-action="sobre" asp-controller="loged" class="cool-link">Sobre</a> </li>
-            <li> <a asp-action="Encomendar" asp-controller="loged" class="cool-link">Encomendas</a> </li>
-            <li> <a asp-action="Downloads" asp-controller="loged" class="cool-link">Downloads</a> </li>
-            <li> <a asp-action="" asp-controller="loged" class="cool-link">FAQ's</a> </li>
-            <li> <a asp-action="contactos" asp-controller="loged" class="cool-link">Contactos</a> </li>
-            <li> <a href="#" class="cool-link">Ofertas</a> </li>
-        </ul>
+        <p style="font-size: 50px; color:white">
+            A sessão foi terminada.
+        </p>
     </div>
 
     <!--lupa-->
     <button type="button" style="position: fixed; top: 35px; right: 120px;border:none;background-color:transparent"> <i style="float:right; margin-right:4px; font-size:1.8em;color:white;" class="fa fa-search" aria-hidden="true"></i></button>
     <!--user-->
-        <div class="dropdown">
-            <button id="yo" class="dropbtn" type="button" data-toggle="modal" data-target="#loginmodal" style="position:fixed; height:40px; width:40px; top:32px; right:70px; border:none;background-color:transparent;float:right;margin-right:10px"><i class="fa fa-user" aria-hidden="true" style="font-size:1.75rem; color:white"></i><i class="fab  pr-1"></i></button><span style="position:fixed; top:32px; right:70px;float:right;margin-right:10px" class="badge badge-light">1</span>
-            <div class="dropdown-content" style="position:fixed; width:200px; top:70px; right:70px;float:right;margin-right:10px; border-radius:5px">
-                <a asp-action="Prefil" asp-controller="Loged">Prefil</a>
-                <a asp-action="Index" asp-controller="home">Verificação de conta <span style="position:fixed; margin-left:5px; margin-top:4px" class="badge badge-light">1</span></a>
-                <a asp-action="SessaoTerminada" asp-controller="Loged">Terminar sessão</a>
-            </div>
-        </div>
+    <div class="dropdown">
+        <button id="yo" type="button" data-toggle="modal" data-target="#loginmodal" style="position:fixed; height:40px; width:40px; top:32px; right:70px; border:none;background-color:transparent;float:right;margin-right:10px"><i class="fa fa-user" aria-hidden="true" style="font-size:1.75rem; color:white"></i><i class="fab  pr-1"></i></button>
+    </div>
     <!--pt/EN-->
     <p classe="pten" style="float:right;color:white;top:37px;right:25px;position:fixed;font-size:1.1em"> <a style="color: white;font-size:1.1em" href="#">PT</a>/<a style="color: white;font-size:1.1em" href="#">EN</a></p>
 </div>
-@{ if (TempData["msg"] != null)
-                {
-    <script>
-            alert('@TempData["msg"]')
-    </script> } }
