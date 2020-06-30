@@ -57,5 +57,10 @@ namespace D2S.Controllers
             TempData["nome"] = null;
             return View();
         }
+
+        public IActionResult Contactos()
+        {
+            return View("../Loged/Contactos");
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿<link href="~/css/cabecalho.css" rel="stylesheet" />
+@model D2S.Models.Login
 <!------------------------ navigation --------------------------->
 <nav class="navbar navbar-expand-lg fixed-top text-center col-12" style="background-color:white">
     <div class="container-fluid">
@@ -34,7 +35,7 @@
                         <a asp-controller="Home" asp-action="contactos" class="cool-link" style="color:black">Contactos</a>
                     </li>
                     <li class="nav-item ">
-                        <a asp-controller="Home" asp-action="contactos" class="cool-link" style="color:black" >Ofertas</a>
+                        <a asp-controller="Home" asp-action="contactos" class="cool-link" style="color:black">Ofertas</a>
                     </li>
                 </ul>
             </div>
@@ -56,34 +57,38 @@
 </nav>
 
 <!--------------------------------------------form de login----------------------------------------------->
-<div class="modal fade" role="dialog" id="loginmodal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!--header-->
-            <div class="modal-header">
-                <h3 class="modal-title">Entrar</h3>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <!--body-->
-            <div class="modal-body">
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="E-mail" />
+<form action="/" method="post">
+    <div class="modal fade" role="dialog" id="loginmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--header-->
+                <div class="modal-header">
+                    <h3 class="modal-title">Entrar</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Palavra-Passe" />
+                <!--body-->
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="control-label">E-mail: </label>
+                        <input asp-for="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Palavra-Passe: </label>
+                        <input asp-for="pass" class="form-control" />
+                    </div>
                 </div>
-            </div>
-            <!--footer-->
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-success">Entrar</button>
-            </div>
-            <div class="link-registo">
-                <p style="color:black">Se ainda não tem uma conta, clique <a asp-controller="home" asp-action="registo">aqui</a> para criar já a sua.</p>
+                <!--footer-->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" asp-controller="Home" asp-action="index">Entrar</button>
+                </div>
+                <div class="link-registo">
+                    <p>Se ainda não tem uma conta, clique <a asp-controller="home" asp-action="registo">aqui</a>para criar já a sua.</p>
+                </div>
             </div>
         </div>
-
     </div>
-</div>
+</form>
 
 <style>
     .cool-link::after {

@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using D2S.Models;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
+using System.Threading;
 
 namespace D2S.Controllers
 {
@@ -26,7 +28,22 @@ namespace D2S.Controllers
                 {
                     string res = db.Save(log);
                     if (res == "s")
-                        return RedirectToAction("index", "Loged", TempData["nome"] = log.email);
+                    {
+                        string url = Request.Headers["Referer"].ToString();
+                        string textoInvertido = new string(url.Reverse().ToArray());
+                        int cont = 0;
+                        foreach (char c in textoInvertido)
+                        {
+                            cont++;
+                            if (c == '/')
+                            {
+                                break;
+                            }
+                        }
+                        string media = textoInvertido.Substring(0, cont - 1);
+                        string textoInvertidofinal = new string(media.Reverse().ToArray());                       
+                        return RedirectToAction(textoInvertidofinal, "Loged", TempData["nome"] = "verificado");
+                    }
                     if (res == "n")
                     {
                         string verificaçao = res;
@@ -44,6 +61,11 @@ namespace D2S.Controllers
         public IActionResult Sobre()
         {
             return View("../Home/PT/sobre");
+        }
+
+        public IActionResult Encomendar()
+        {
+            return View("../Home/PT/Encomendar");
         }
 
         public IActionResult Manutencao()

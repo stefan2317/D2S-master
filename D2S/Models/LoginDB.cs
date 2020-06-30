@@ -32,6 +32,7 @@ namespace D2S.Models
                 string dd1 = "";
                 if (dd == "")
                 {
+                    
                     dd1 = "s";
                 }
                 else
