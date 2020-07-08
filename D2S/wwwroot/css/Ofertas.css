@@ -1,0 +1,20 @@
+﻿#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start; /*justify-content:space-between*/
+    align-items: flex-start; /*strech (ocupa todo o espaco vertical da div pai)*/ /*baseline (ocupa so o esapco de inicio da div pai)*/
+}
+
+.item {
+    /* isto e a forma simplificada dos 3 que se encontram em baixo pela respetiva ordem.*/
+    flex: 0 1 auto;
+    /***********************************************************************************/
+    /* flex-grow:0; /*ocupa o resto da largura da div*/
+    /* flex-shrink:1;/*encolhe a nossa div*/
+    /* flex-basis: auto; /*define uma widht ou seja largura de cada elemento caso nao tenha*/
+}
+
+.item:nth-child(1){
+    order:2; /*definimos que o primeiro filho fica na ordem 2, ou seja, aparece na segunda divisao.*/
+}

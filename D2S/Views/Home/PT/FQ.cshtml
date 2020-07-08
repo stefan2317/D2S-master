@@ -1,0 +1,510 @@
+﻿<link href="~/css/FQ.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="~/js/FQ.js"></script>
+@{
+    ViewBag.Title = "FAQ's";
+}
+<body>
+    @* primaeira div a ser mostrada , ou seja, a conta*@
+    @* cabecalho*@
+    <section id="contentchild11">
+        <section id="content">
+            <div class="item" style="background-color:white" onclick="um()" id="um">
+                <p>Conta D2S</p>
+            </div>
+
+            <div class="item" onclick="dois()" id="dois">
+                <p>Pagamento</p>
+            </div>
+
+            <div class="item " onclick="tres()" id="tres">
+                <p>Envio</p>
+            </div>
+
+            <div class="item " onclick="quatro()" id="quatro">
+                <p>Tracking</p>
+            </div>
+        </section>
+    </section>
+    @* corpo*@
+
+    <div id="conta">
+        @* corpo*@
+        <section id="contentchild1">
+            @* cabecalho do corpo*@
+            <section id="contentchild">
+                <div class="item">
+                    Conta D2S
+                </div>
+            </section>
+            @*corpo do corpo 1 *@
+            <section id="contentchild2">
+                <div class="item">
+                    Sobre a Conta D2S
+                </div>
+                <section id="contentchild3">
+                    <div class="item">
+                        Quais são os beneficios de criar uma conta D2S?
+                    </div>
+                    <div id="mais1" onclick="mais1()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="primeiro" style="display:none">
+                        <p>Se criar uma conta, poderá:</p>
+                        <ul>
+                            <li>Receber notificações sobre ofertas e campanhas de produtos que sejam do seu interesse.</li>
+                            <li>Definir as preferências das categoriais de produto sobre as quais deseja receber comunicações, e ser notificado quando houver ofertas relativas a esses produtos, ou quando existirem novos produtos disponíveis.</li>
+                        </ul>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+            </section>
+            @*corpo do corpo 2 *@
+            <section id="contentchild2" style="margin-top:1%">
+                <div class="item">
+                    Iniciar/Encerrar Sessão
+                </div>
+                <section id="contentchild3">
+                    <div class="item">
+                        Como posso iniciar/encerrar sessão?
+                    </div>
+                    <div id="mais2" onclick="mais2()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="segundo" style="display:none">
+                        <p style="font-weight:bold;margin-bottom:0%">Iniciar sessão</p>
+                        <p>Pode iniciar sessão clicando no icone com o formato de uma pessoa na parte superior direita desta mesma página.</p>
+                        <p style="font-weight:bold;margin-bottom:0%">Encerrar Sessão</p>
+                        <p>Quando tiver feito o seu login,para encerrar a sua sessão basta clicar no icone com o formato de uma pessoa e irá lhe aparecer uma opção que diz "Terminar sessão". </p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+
+                <section id="contentchild3">
+                    <div class="item">
+                        Está a ter algum problema em iniciar sessão?
+                    </div>
+                    <div id="mais3" onclick="mais3()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="terceiro" style="display:none">
+                        <p>Se estiver com algum problema ao iniciar a sessão na sua conta, confirme se tem a opção 'Caps Lock' ligada. As passwords são sensíveis a letras maiúsculas ou minúsculas.</p>
+                        <p>Se esta opção não funcionar, utilize a opção "Esqueci-me da password" e siga o link enviado para o seu endereço de email.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+                <section id="contentchild3">
+                    <div class="item">
+                        Acho que alguém acedeu à minha conta sem a minha autorização. O que posso fazer?
+                    </div>
+                    <div id="mais4" onclick="mais4()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="quarto" style="display:none">
+                        <p>Redefina a sua password utilizando a opção ""Esqueci-me da password"".</p>
+                        <p>Não se preocupe: </p>
+                        <p>A Samsung não armazena todos os dados dos seus cartões de pagamento. Depois de comprar um produto em Samsung.com, as únicas informações visíveis na sua conta (incluindo pela nossa equipa de apoio ao cliente) são:</p>
+                        <ul>
+                            <li>A data em que o seu pedido foi realizado</li>
+                            <li>O valor pago</li>
+                            <li>Os últimos 4 dígitos do cartão que utilizou</li>
+                            <li>A data de validade e o tipo de cartão</li>
+                            <li>Nome no cartão</li>
+                        </ul>
+                        <p>Uma vez que estas são as únicas informações disponíveis, não poderão ser usadas por outra pessoa para pagamentos não autorizados.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+
+                <section id="contentchild3escondido" style="display:none">
+                    <div class="item">
+                        Como altero/redefino a minha password?
+                    </div>
+                    <div id="mais5" onclick="mais5()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="quinto" style="display:none">
+                        <p>Pode redefinir a sua password através do formulário para recuperar a sua password, disponível na página de início de sessão.</p>
+                        <p>A nossa equipa de apoio ao cliente não tem acesso à sua password e nunca lhe irá solicitar caso entre em contacto consigo.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+
+                <section id="contentchild3">
+                    <div class="item" style="margin-top:0%">
+                        <a id="vermais" onclick="vermais()" style="text-decoration:underline">Ver mais</a>
+                    </div>
+                </section>
+            </section>
+
+            @*corpo do corpo 3 *@
+            <section id="contentchild2" style="margin-top:1%">
+                <div class="item">
+                    Criar Conta
+                </div>
+                <section id="contentchild3">
+                    <div class="item">
+                        Como posso criar a minha conta D2S ?
+                    </div>
+                    <div id="mais6" onclick="mais6()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="sexto" style="display:none">
+                        <p>Pode abrir uma conta selecionando o link 'Iniciar sessão' na parte superior desta página e depois na opção 'Criar conta' na página de início de sessão da conta D2S. Em alternativa, pode ainda criar uma conta se avançar com o processo de encomenda.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+
+                <section id="contentchild3">
+                    <div class="item">
+                        Preciso de criar uma conta D2S para realizar encomendas no website D2S.pt?
+                    </div>
+                    <div id="mais7" onclick="mais7()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="setimo" style="display:none">
+                        <p>Pode fazer o processo de encomenda como convidado, não sendo obrigatório criar uma conta D2S.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+            </section>
+
+        </section>
+    </div>
+
+
+
+    @*************************************************************************************************************************************************************************************************@
+    @**********************************************************************************PAGAMENTOOOOOOO**********************************************************************************************************@
+    @*************************************************************************************************************************************************************************************************@
+
+    <div id="pagamento" style="display:none">
+        @* corpo*@
+        <section id="contentchild1">
+            @* cabecalho do corpo*@
+            <section id="contentchild">
+                <div class="item">
+                    Pagamento
+                </div>
+            </section>
+            @*corpo do corpo 1 *@
+            <section id="contentchild2">
+                <section id="contentchild3">
+                    <div class="item">
+                        Quais são os métodos de pagamento que são aceites?
+                    </div>
+                    <div id="mais8" onclick="mais8()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="oitavo" style="display:none">
+                        <p>Todos os principais cartões de crédito e débito são aceites (Mastercard, Visa Card, Amex). Pode ainda fazer o pagamento das suas encomendas via Multibanco.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+
+                <section id="contentchild3">
+                    <div class="item">
+                        O meu pagamento falhou. o que fazer agora?
+                    </div>
+                    <div id="mais9" onclick="mais9()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="nono" style="display:none">
+                        <p>Se o seu pagamento falhar, no caso ter sido efetuado através de cartão de crédito, recomendamos que, em primeiro lugar, entre em contato com seu o banco para excluir a possibilidade de existência de qualquer problema com seu cartão. No caso de o pagamento ter sido efetuado através de multibanco, por favor entre em contacto com a nossa equipa de apoio ao cliente:</p>
+                        <p style="font-size:medium">Email: transportadorad2s@@gmail.com</p>
+                        <p style="font-size:medium">Telefone: 808 207 267 (Linha Azul, Segunda a Sexta das 09H00 às 20H00)</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+
+                <section id="contentchild3">
+                    <div class="item">
+                        O meu pagamento foi debitado mais do que uma vez. Como posso fazer para receber o meu dinheiro de volta?
+                    </div>
+                    <div id="mais10" onclick="mais10()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="decimo" style="display:none">
+                        <p>Se achar que o seu pagamento foi debitado mais do que uma vez, por favor entre em contacto com a nossa equipa de apoio ao cliente para que o possamos ajudar.</p>
+                        <p style="font-size:medium">Email: transportadorad2s@@gmail.com</p>
+                        <p style="font-size:medium">Telefone: 808 207 267 (Linha Azul, Segunda a Sexta das 09H00 às 20H00)</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+                <section id="contentchild32escondido" style="display:none">
+                    <div class="item">
+                        Quanto tempo leva para que um pagamento que foi debitado mais do que uma vez seja reembolsado?
+                    </div>
+                    <div id="mais11" onclick="mais11()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="decimoprimeiro" style="display:none">
+                        <p>Pode demorar até 15 dias para que o seu reembolso seja emitido.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+                <section id="contentchild32escondido2" style="display:none">
+                    <div class="item">
+                        O pagamento será debitado antes de eu receber a minha encomenda ou após o recebimento da mesma?
+                    </div>
+                    <div id="mais12" onclick="mais12()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="decimosegundo" style="display:none">
+                        <p>O débito do pagamento é feito quando terminar o processo de encomenda. No entanto, a identificação da transação nos seus movimentos bancários pode variar de acordo com o seu banco. A sua encomenda só será enviada após termos recebido a confirmação do pagamento.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+
+                <section id="contentchild3">
+                    <div class="item" style="margin-top:0%">
+                        <a id="vermais2" onclick="vermais2()" style="text-decoration:underline">Ver mais</a>
+                    </div>
+                </section>
+            </section>
+
+
+        </section>
+
+    </div>
+
+
+    @*************************************************************************************************************************************************************************************************@
+    @**********************************************************************************Envio**********************************************************************************************************@
+    @*************************************************************************************************************************************************************************************************@
+
+    <div id="envio" style="display:none">
+        @* corpo*@
+        <section id="contentchild1">
+            @* cabecalho do corpo*@
+            <section id="contentchild">
+                <div class="item">
+                    Envio
+                </div>
+            </section>
+            @*corpo do corpo 1 *@
+            <section id="contentchild2">
+                <div class="item">
+                    Envio
+                </div>
+                <section id="contentchild3">
+                    <div class="item">
+                        Posso solicitar uma data, ou horário especifico, para a entrega da minha encomenda?
+                    </div>
+                    <div id="mais13" onclick="mais13()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="decimoterceiro" style="display:none">
+                        <p>Esta opção apenas está disponível para as entregas de produtos de grande porte, mediante a disponibilidade de agendamento da transportadora.</p>
+                        <p style="font-size:medium">Para os restantes produtos deve considerar o prazo de entrega padrão, de até 3 dias úteis.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+
+                <section id="contentchild3">
+                    <div class="item">
+                        Posso fazer a minha encomenda online e levantar os meus produtos em loja ?
+                    </div>
+                    <div id="mais14" onclick="mais14()" class="item">
+                        +
+                    </div>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+                <section id="contentchild4">
+                    <section id="decimoquarto" style="display:none">
+                        <p> De momento não existe essa possibilidade. Todas as compras terão de ser enviadas diretamente pela D2S diretamente ao cliente.</p>
+                        <hr style="margin-top:1%;width:100%" />
+                    </section>
+                </section>
+            </section>
+
+            @*corpo do corpo 2 *@
+        <section id="contentchild2">
+            <div class="item">
+                Problemas com a Entrega?
+            </div>
+            <section id="contentchild3">
+                <div class="item">
+                    Detectei que a embalagem está danificada no momento em que está a ser feita a entrega.O que posso fazer?
+                </div>
+                <div id="mais15" onclick="mais15()" class="item">
+                    +
+                </div>
+                <hr style="margin-top:1%;width:100%" />
+            </section>
+            <section id="contentchild4">
+                <section id="decimoquinto" style="display:none">
+                    <p style="font-size:xx-large;font-weight:bold">Não quero aceitar a entrega da minha encomenda, a embalagem parece danificada</p>
+                    <p>Se estiver a receber a entrega de uma encomenda, e perceber que a sua embalagem ou artigos estão danificados, pode recusar a entrega da mesma.</p>
+                    <p>Após a recusa da entrega, os seus artigos serão devolvidos à D2S. Quando recebidos, um processo de reembolso será desencadeado. O reembolso pode demorar até 15 dias após o recebimento do(s) artigo(s) pela D2S. Se ainda pretender receber os seus artigos, faça uma nova encomenda através do site D2S.pt</p>
+                    <p>Se aceitou uma entrega e descobriu que o seu artigo está danificado, é importante que nos informe o mais rápido possível. Para devolver os seus artigos, siga as seguintes etapas abaixo:</p>
+                    <ol>
+                        <li>Aceda a área ""A minha conta"", selecione a encomenda que pretende devolver, e submeta o seu pedido de devolução. Opção apenas disponível após os 14 dias posteriores à data da entrega.</li>
+                        <li>Irá ser contactado pelo operador logístico parceiro da Samsung para agendar a recolha do(s) artigo(s).</li>
+                        <li>Depois de os artigos serem recebidos, inspecionaremos os mesmos para garantir que estão intactos, com embalagem original e completos (incluindo acessórios, ofertas e manuais de utilização/instruções) e acompanhados do respetivo comprovativo de compra (factura original). Se for elegível, um reembolso será processado usando a forma de pagamento usada para a comprar do(s) produto(s). A Samsung reserva-se o direito de não aceitar artigos que não cumpram condições as condições de devolução identificadas nas Condições Gerais de Fornecimento.</li>
+                        <li>
+                            Em caso de dúvidas entre em contacto com o nosso serviço de apoio ao cliente:<br />
+                            Email: transportadorad2s@@gmail.com <br />
+                            Telefone: 808 207 267 (Linha Azul, Segunda a Sexta das 09H00 às 20H00)
+                        </li>
+                    </ol>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+            </section>
+
+            <section id="contentchild3">
+                <div class="item">
+                    Detectei um defeito num artigo recebido. o que posso fazer?
+                </div>
+                <div id="mais16" onclick="mais16()" class="item">
+                    +
+                </div>
+                <hr style="margin-top:1%;width:100%" />
+            </section>
+            <section id="contentchild4">
+                <section id="decimosexto" style="display:none">
+                    <p style="font-size:xx-large;font-weight:bold">A minha encomenda foi entregue mas só dectetei um defeito num artigo após ter aberto a caixa</p>
+                    <p>Se detectar um defeito num artigo, é importante que nos informe o mais rápido possível. Se encontrar o defeito no artigo dentro dos 14 dias posteriores à data da entrega, faça o seu pedido de devolução directamente na secção ""A minha conta"".</p>
+                    <ul>
+                        <li style="font-size:medium">Depois de o seu pedido ser submetido, irá ser contactado pelo operador logístico parceiro da Samsung para agendar a recolha do(s) artigo(s).</li>
+                        <li style="font-size:medium">Quando os artigos forem recebidos, serão inspecionados para garantir que estão intactos, com embalagem original e completos (incluindo acessórios, ofertas e manuais de utilização/instruções) e acompanhados do respectivo comprovativo de compra (factura original). Se for elegível, o reembolso será processado através da forma de pagamento usada para a compra do(s) produto(s). A Samsung reserva-se o direito de não aceitar artigos que não cumpram condições as condições de devolução identificadas nas Condições Gerais de Fornecimento.</li>
+                    </ul>
+                    <ol>
+                        <li>Caso tenha detectado um defeito num artigo após os 14 dias posteriores à data da entrega, entre em contacto com a nossa equipa de apoio ao cliente.</li>
+                    </ol>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+            </section>
+
+            <section id="contentchild3">
+                <div class="item">
+                    O meu artigo chegou danificado e decidi ficar com ele. Tenho direito a algum desconto ou compensação?
+                </div>
+                <div id="mais17" onclick="mais17()" class="item">
+                    +
+                </div>
+                <hr style="margin-top:1%;width:100%" />
+            </section>
+            <section id="contentchild4">
+                <section id="decimosetimo" style="display:none">
+                    <p>Não. Se um produto estiver com defeito ou danificado aquando do ato da entrega, recomendamos que nos informe o mais rapidamente possível, e se possível logo na entrega, para que possamos ajudá-lo com o processo de devolução do produto e respectivo reembolso. Em caso de dúvida entre em contacto com a nossa equipa de apoio ao cliente.</p>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+            </section>
+
+            <section id="contentchild3">
+                <div class="item">
+                    Não consegui estar disponivel para receber os equipamentos adquiridos no dia da entrega. E agora?
+                </div>
+                <div id="mais18" onclick="mais18()" class="item">
+                    +
+                </div>
+                <hr style="margin-top:1%;width:100%" />
+            </section>
+            <section id="contentchild4">
+                <section id="decimooitavo" style="display:none">
+                    <p>No caso de impossibilidade de entrega dos produtos encomendados, a D2S procederá a uma nova tentativa de entrega nos termos acordados no momento da realização da encomenda. Caso se verifique uma segunda impossibilidade de entrega que seja imputável ao Cliente, a D2S irá resolver o contrato, cancelando a encomenda e dando início ao processo de reembolso a partir do momento que os artigos forem recebidos em armazém. Se ainda desejar receber o seu(s) artigo(s) deve realizar uma nova encomenda.</p>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+            </section>
+
+            <section id="contentchild3">
+                <div class="item">
+                    Acho que a minha encomenda está perdida. Quem devo contactar?
+                </div>
+                <div id="mais19" onclick="mais19()" class="item">
+                    +
+                </div>
+                <hr style="margin-top:1%;width:100%" />
+            </section>
+            <section id="contentchild4">
+                <section id="decimonono" style="display:none">
+                    <p style="font-size:xx-large;font-weight:bold">Entregas ao domicílio:</p>
+                    <p>Aguarde até 3 dias úteis para receber a(s) sua(s) encomenda(s). Os 3 dias começam a ser contabilizados a partir do momento em que receber um e-mail nosso, com a confirmação da sua encomenda. Se decorrerem mais de 6 dias após a confirmação do email, e ainda não tiver recebido a(s) sua(s) encomenda(s), entre em contacto com a nossa equipa de apoio ao cliente, que estará disponível para o ajudar. Caso tenha uma conta criada, pode consultar também o estado de entrega do(s) seu(s) artigo(s) na secção "A minha conta". No caso de ter feito uma encomenda através do modo convidado, pode consultar o estado da(s) entrega(s) através da secção "As minhas encomendas". Para isso, deve indicar nos campos disponíveis para o efeito o número da encomenda e o endereço de email utilizado para fazer a encomenda.</p>
+                    <p style="font-size:xx-large;font-weight:bold">Entregas ao domicílio(c/instalação):</p>
+                    <ol>
+                        <li>No caso de a encomenda ser entregue ao domicílio com serviço de instalação, esta é feita mediante agendamento com o Cliente. Após o contacto da Samsung para o efeito, o Cliente deve assegurar a sua disponibilidade com a antecedência mínima de 2 dias e máxima de 15 dias, sob pena de, após decorrido o referido período sem que a encomenda possa ser entregue, a Samsung poder resolver o contrato de compra e venda por sua livre iniciativa. Se após 15 dias de ter recebido o email de confirmação da encomenda ainda não tiver sido contactado, por favor entre em contacto com a nossa equipa de apoio ao cliente.</li>
+                    </ol>
+                    <hr style="margin-top:1%;width:100%" />
+                </section>
+            </section>
+
+
+        </section>
+
+        </section>
+    </div>
+
+
+
+
+
+
+    @*************************************************************************************************************************************************************************************************@
+    @**********************************************************************************Tracking**********************************************************************************************************@
+    @*************************************************************************************************************************************************************************************************@
+
+
+
+
+
+
+
+
+</body>
+
+
+<script>
+  
+</script>

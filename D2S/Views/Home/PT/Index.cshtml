@@ -28,7 +28,7 @@
             <li> <a asp-action="sobre" asp-controller="home" class="cool-link">Sobre</a> </li>
             <li> <a asp-action="encomendar" asp-controller="home" class="cool-link">Encomendas</a> </li>
             <li> <a asp-action="Downloads" asp-controller="home" class="cool-link">Downloads</a> </li>
-            <li> <a asp-action="" asp-controller="home" class="cool-link">FAQ's</a> </li>
+            <li> <a asp-action="FQ" asp-controller="home" class="cool-link">FAQ's</a> </li>
             <li> <a asp-action="contactos" asp-controller="home" class="cool-link">Contactos</a> </li>
             <li> <a href="#" class="cool-link">Ofertas</a> </li>
         </ul>
@@ -65,10 +65,10 @@
                 </div>
                 <!--footer-->
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-success" asp-controller="Home" asp-action="index">Entrar</button>
+                    <button type="submit" class="btn btn-success" asp-controller="home" asp-action="index">Entrar</button>
                 </div>
                 <div class="link-registo">
-                    <p>Se ainda não tem uma conta, clique <a asp-controller="home" asp-action="registo">aqui</a>para criar já a sua.</p>
+                    <p>Se ainda não tem uma conta, clique <a asp-controller="cliente" asp-action="registo">aqui</a>para criar já a sua.</p>
                 </div>
             </div>
         </div>

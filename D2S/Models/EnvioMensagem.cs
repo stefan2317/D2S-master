@@ -27,8 +27,7 @@ namespace D2S.Models
             catch (Exception ex)
             {
                 if (con.State == ConnectionState.Open)
-                {
-                    var ff = "";
+                {                   
                     con.Close();
                 }
                 return (ex.Message.ToString());

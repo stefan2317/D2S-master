@@ -12,12 +12,20 @@ namespace D2S.Controllers
     public class ClienteController : Controller
     {
 
-        EnvioCliente dbop = new EnvioCliente();
+        [HttpGet]
+        public IActionResult Registo()
+        {           
+            ViewBag.ver = null;
+            return View("../Home/PT/registo");
+        }
+
+        
        
         [HttpPost]
         [AutoValidateAntiforgeryToken]
         public IActionResult registo([Bind]Cliente emp)
         {
+            EnvioCliente dbop = new EnvioCliente();
             try
             {
                 if (ModelState.IsValid)
@@ -65,14 +73,16 @@ namespace D2S.Controllers
                 ViewBag.nif = emp.nif;
                 ViewBag.pass = emp.pass;
                 ViewBag.confpass = emp.confpass;
-                return View("../Home/PT/Registo",emp);
+                ViewBag.ver = null;
+                return View("../Home/PT/Registo");
             }
             
-        }
+         }
 
         [HttpPost]
-        public ViewResult ver2([Bind] Cliente emp)
+        public ViewResult ver2()
         {
+           
             if (ModelState.IsValid)
             {               
                 ViewBag.ver = "3";
@@ -80,10 +90,11 @@ namespace D2S.Controllers
             }
             else
             {
-                ViewBag.ver = "3";
+                ViewBag.ver = "sim";
                 return View("../Home/PT/Registo");
             }
 
+        
         }
     }
 

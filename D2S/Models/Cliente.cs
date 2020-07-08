@@ -31,8 +31,8 @@ namespace D2S.Models
         [Required]
         public string datadenascimento { get; set; }
 
-     
-        public int nif { get; set; }
+        
+        public Nullable<int> nif { get; set; }
 
         [Required]
         public string pass { get; set; }

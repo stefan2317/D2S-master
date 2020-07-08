@@ -7,21 +7,23 @@ using D2S.Models;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
 using System.Threading;
+using Microsoft.AspNetCore.Authorization;
 
 namespace D2S.Controllers
 {
     public class HomeController : Controller
     {
-        LoginDB db = new LoginDB();
 
         public IActionResult Index()
         {
             return View("../Home/PT/index");
         }
 
+
         [HttpPost]
         public IActionResult Index([Bind] Login log)
         {
+            LoginDB db = new LoginDB();
             try
             {
                 if (ModelState.IsValid)
@@ -41,7 +43,7 @@ namespace D2S.Controllers
                             }
                         }
                         string media = textoInvertido.Substring(0, cont - 1);
-                        string textoInvertidofinal = new string(media.Reverse().ToArray());                       
+                        string textoInvertidofinal = new string(media.Reverse().ToArray());
                         return RedirectToAction(textoInvertidofinal, "Loged", TempData["nome"] = "verificado");
                     }
                     if (res == "n")
@@ -63,6 +65,11 @@ namespace D2S.Controllers
             return View("../Home/PT/sobre");
         }
 
+        public IActionResult FQ()
+        {
+            return View("../Home/PT/FQ");
+        }
+
         public IActionResult Encomendar()
         {
             return View("../Home/PT/Encomendar");
@@ -72,11 +79,7 @@ namespace D2S.Controllers
         {
             return View("../Home/PT/manutencao");
         }
-
-        public IActionResult Registo()
-        {
-            return View("../Home/PT/registo");
-        }
+       
 
         public IActionResult Contactos()
         {
